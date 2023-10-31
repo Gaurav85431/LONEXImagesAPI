@@ -23,11 +23,11 @@ app.get('/getapi', (req, res) => {
 
 });
 
-/*
+
 app.listen(3000, function () {
   console.log("Server is ready");
 })
-*/
+
 
 ////
 

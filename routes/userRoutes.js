@@ -60,5 +60,17 @@ user_routes.get('/getAllData', user_controller.get_all_data);
 user_routes.get('/getImages/:images', user_controller.get_image);
 
 
+// Delete API::- DELETE
+
+user_routes.delete('/deleteData/:id', user_controller.delete_data);
+
+
+// UPDATE API::-  PUT
+
+
+user_routes.put('/updateData/:id', upload.single('images'), user_controller.update_data);
+
+
+
 module.exports = user_routes;
 
