@@ -40,6 +40,7 @@ const get_all_data = async (req, res) => {
       imagePath: path.join(__dirname, '..', 'public/images', item.images),
       title: item.title,
       description: item.description,
+      images: item.images,
       id: item._id
 
     }));
