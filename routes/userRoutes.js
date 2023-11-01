@@ -44,31 +44,31 @@ const user_controller = require('../controllers/userControllers');
 
 // Insert API::- POST
 
-user_routes.post('/insertData', upload.single('images'), user_controller.insert_data);
+user_routes.post('/insertData', auth, upload.single('images'), user_controller.insert_data);
 
 
 // Get Single Data
 
-user_routes.get('/getData/:id', user_controller.get_data);
+user_routes.get('/getData/:id', auth, user_controller.get_data);
 
 // Get All Data::
-user_routes.get('/getAllData', user_controller.get_all_data);
+user_routes.get('/getAllData', auth, user_controller.get_all_data);
 
 
 // Get Particular image based on imagename
 
-user_routes.get('/getImages/:images', user_controller.get_image);
+user_routes.get('/getImages/:images', auth, user_controller.get_image);
 
 
 // Delete API::- DELETE
 
-user_routes.delete('/deleteData/:id', user_controller.delete_data);
+user_routes.delete('/deleteData/:id', auth, user_controller.delete_data);
 
 
 // UPDATE API::-  PUT
 
 
-user_routes.put('/updateData/:id', upload.single('images'), user_controller.update_data);
+user_routes.put('/updateData/:id', auth, upload.single('images'), user_controller.update_data);
 
 
 
