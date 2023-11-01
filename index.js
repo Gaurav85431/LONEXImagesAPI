@@ -10,10 +10,12 @@ app.use(cors());
 
 //user routes
 const user_route = require('./routes/userRoutes');
+const login_route = require('./routes/LoginRoutes');
 
 
 
 app.use('/api', user_route);
+app.use('/api', login_route);
 
 
 
